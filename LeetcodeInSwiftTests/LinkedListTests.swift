@@ -23,7 +23,46 @@ func reverseLinkedList(_ node: Node<Int>?, into array: inout [Int]) {
     array.append(node.value)
 }
 
+/**
+ Challenge 2: Find the middle node.
+
+ 1. 1 -> 2 -> 3 -> 4 -> nil should return node with value 3
+ 2. 1 -> 2 -> 3 -> nil should return node with value 2
+ */
+/// - Parameter list: a LinkList
+/// - Returns: the middle node of LinkList
+func fundTheMiddleNode(from list: LinkedList<Int>) -> Node<Int>? {
+    var faster = list.head
+    var slower = list.head
+
+    while let fasterNext = faster?.next {
+        faster = fasterNext.next
+        slower = slower?.next
+    }
+    return slower
+}
+
 class LinkedListTests: XCTestCase {
+
+    func test_FundTheMiddleNode() {
+        let test1 = makeLinkList(from: [1,2,3,4])
+        XCTAssertEqual(fundTheMiddleNode(from: test1)?.value, 3)
+
+        let test2 = makeLinkList(from: [1,2,3])
+        XCTAssertEqual(fundTheMiddleNode(from: test2)?.value, 2)
+
+        let test3 = makeLinkList(from: [])
+        XCTAssertEqual(fundTheMiddleNode(from: test3)?.value, nil)
+
+        let test4 = makeLinkList(from: [1,2])
+        XCTAssertEqual(fundTheMiddleNode(from: test4)?.value, 2)
+
+        let test5 = makeLinkList(from: [1,2,3,4,5,6])
+        XCTAssertEqual(fundTheMiddleNode(from: test5)?.value, 4)
+
+        let test6 = makeLinkList(from: [1,2,3,4,5,6,7,8,9])
+        XCTAssertEqual(fundTheMiddleNode(from: test6)?.value, 5)
+    }
 
     func test_ReverseLinkedList() {
 
