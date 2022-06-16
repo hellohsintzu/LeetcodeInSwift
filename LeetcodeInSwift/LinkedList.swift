@@ -29,6 +29,7 @@ public struct LinkedList<Value> {
 
     public init() {}
 
+    /// Adds value at the front of the list.
     public mutating func push(_ value: Value) {
         copyNodes()
         let node = Node(value: value, next: head)
@@ -38,6 +39,7 @@ public struct LinkedList<Value> {
         }
     }
 
+    /// Adds a value at the end of the list.
     public mutating func append(_ value: Value) {
         copyNodes()
         let node = Node(value: value)
@@ -60,7 +62,9 @@ public struct LinkedList<Value> {
         return currentNode
     }
 
+
     @discardableResult
+    /// Adds a value after a particular list node.
     public mutating func insert(_ value: Value,
                        after node: Node<Value>) -> Node<Value>? {
         copyNodes()
@@ -73,6 +77,7 @@ public struct LinkedList<Value> {
     }
 
     @discardableResult
+    /// Removes the value at the front of the list.
     public mutating func pop() -> Value? {
         copyNodes()
         defer {
@@ -85,6 +90,7 @@ public struct LinkedList<Value> {
     }
 
     @discardableResult
+    /// Removes the value at the end of the list.
     public mutating func removeLast() -> Value? {
         copyNodes()
         if isEmpty { return nil }
@@ -103,6 +109,7 @@ public struct LinkedList<Value> {
     }
 
     @discardableResult
+    /// Removes the value anywhere in the list.
     public mutating func remove(after node: Node<Value>?) -> Value? {
         guard let node = copyNodes(returningCopyOf: node) else { return nil }
         defer {
@@ -175,7 +182,7 @@ extension LinkedList {
         tail = newNode
     }
 
-    //p.75
+    /// Return the newly copied node based on the passed in parameter.
     private mutating func copyNodes(returningCopyOf node: Node<Value>?) -> Node<Value>? {
         guard !isKnownUniquelyReferenced(&head),
               var oldNode = head else { return nil }
