@@ -52,18 +52,23 @@ func fundTheMiddleNode(from list: LinkedList<Int>) -> Node<Int>? {
 /// before 1 -> 2 -> 3 -> nil
 ///
 /// after 3 -> 2 -> 1 -> nil
-func reverseLinkedList(_ list: LinkedList<Int>) -> LinkedList<Int> {
-    var tempList = LinkedList<Int>()
+func reverseLinkedList(_ list: inout LinkedList<Int>) {
+    var prev = list.head    //First temp node reference container called `prev`.
+    var current = list.head?.next   //Second temp node reference container called `current`.
+    prev?.next = nil    //Due to we reversed the linkedList, `head` should become `tail`, and `tail` next should be nil.
 
-    for value in list {
-        tempList.push(value)
+    while current != nil {
+        let next = current?.next    //third temp node reference container called `next`.
+        current?.next = prev    //Link current node to previous node, so two node has reversed.
+        prev = current  //move current to next one, so now `current` is next step's `prev`.
+        current = next  //now, makes `next` to `current`, now we have moved the current to next now.
     }
-    return tempList
+    list.head = list.tail
 }
 
 class LinkedListTests: XCTestCase {
 
-    func test_reverseLinkedList() {
+    func test_ReverseLinkedList() {
         let test1: [Int] = []
         expect_ReverseLinkedList(input: test1, shouldOutput: test1.reversed())
         let test2 = [1]
@@ -129,9 +134,9 @@ class LinkedListTests: XCTestCase {
         guard numbers.count == reversedNumbers.count else {
             return XCTFail("number is not match")
         }
-        let list = makeLinkList(from: numbers)
-        let reversedList = reverseLinkedList(list)
-        let reversedNodes = nodes(of: reversedList)
+        var list = makeLinkList(from: numbers)
+        reverseLinkedList(&list)
+        let reversedNodes = nodes(of: list)
         let expectList = makeLinkList(from: reversedNumbers)
         let expectNodes = nodes(of: expectList)
 
