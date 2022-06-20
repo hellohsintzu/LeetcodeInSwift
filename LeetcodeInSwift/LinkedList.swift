@@ -51,6 +51,7 @@ public struct LinkedList<Value> {
         tail = node
     }
 
+    /// Return the node at inputed index.
     public func node(at index: Int) -> Node<Value>? {
         var currentNode = head
         var currentIndex = 0
@@ -63,8 +64,8 @@ public struct LinkedList<Value> {
     }
 
 
-    @discardableResult
     /// Adds a value after a particular list node.
+    @discardableResult
     public mutating func insert(_ value: Value,
                        after node: Node<Value>) -> Node<Value>? {
         copyNodes()
@@ -76,8 +77,8 @@ public struct LinkedList<Value> {
         return node.next
     }
 
-    @discardableResult
     /// Removes the value at the front of the list.
+    @discardableResult
     public mutating func pop() -> Value? {
         copyNodes()
         defer {
@@ -89,8 +90,8 @@ public struct LinkedList<Value> {
         return head?.value
     }
 
-    @discardableResult
     /// Removes the value at the end of the list.
+    @discardableResult
     public mutating func removeLast() -> Value? {
         copyNodes()
         if isEmpty { return nil }
@@ -108,8 +109,8 @@ public struct LinkedList<Value> {
         return current?.value
     }
 
-    @discardableResult
     /// Removes the value anywhere in the list.
+    @discardableResult
     public mutating func remove(after node: Node<Value>?) -> Value? {
         guard let node = copyNodes(returningCopyOf: node) else { return nil }
         defer {
