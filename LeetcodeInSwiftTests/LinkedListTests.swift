@@ -8,13 +8,12 @@
 import XCTest
 import LeetcodeInSwift
 
-/**
- Challenge 1: Print in reverse.
 
- 1 -> 2 -> 3 -> nil
-
- should return [3, 2, 1]
- */
+/// Challenge 1: Print in reverse.
+///
+///     1 -> 2 -> 3 -> nil
+///     should return [3, 2, 1]
+///
 /// - Parameters:
 ///   - node: Should put linkedList head node.
 ///   - array: The array which collect numbers.
@@ -24,15 +23,11 @@ func printInReverseLinkedList(_ node: Node<Int>?, into array: inout [Int]) {
     array.append(node.value)
 }
 
-/**
- Challenge 2: Find the middle node.
-
-1 -> 2 -> 3 -> 4 -> nil should return node with value 3
-
-1 -> 2 -> 3 -> nil should return node with value 2
- */
-/// - Parameter list: a LinkList
-/// - Returns: the middle node of LinkList
+/// Challenge 2: Find the middle node.
+///
+///     1 -> 2 -> 3 -> 4 -> nil should return node with value 3
+///     1 -> 2 -> 3 -> nil should return node with value 2
+///
 func fundTheMiddleNode(from list: LinkedList<Int>) -> Node<Int>? {
     var faster = list.head
     var slower = list.head
@@ -49,9 +44,9 @@ func fundTheMiddleNode(from list: LinkedList<Int>) -> Node<Int>? {
 ///
 /// Create a function that reverses a linked list. You do this by manipulating the nodes so that they’re linked in the other direction.
 ///
-/// before 1 -> 2 -> 3 -> nil
+///     before 1 -> 2 -> 3 -> nil
+///     after 3 -> 2 -> 1 -> nil
 ///
-/// after 3 -> 2 -> 1 -> nil
 func reverseLinkedList(_ list: inout LinkedList<Int>) {
     var prev = list.head    //First temp node reference container called `prev`.
     var current = list.head?.next   //Second temp node reference container called `current`.
@@ -72,13 +67,10 @@ func reverseLinkedList(_ list: inout LinkedList<Int>) {
 ///Your goal is to return a new linked list that contains the nodes from two lists in sorted order.
 ///You may assume the sort order is ascending.
 ///
-/// list1:
-///
-/// 1 -> 4 -> 10 -> 11
-///
-/// list2:
-///
-/// -1 -> 2 -> 3 -> 6
+///     list1:
+///     1 -> 4 -> 10 -> 11
+///     list2:
+///     -1 -> 2 -> 3 -> 6
 ///
 /// merged list:
 ///
