@@ -83,32 +83,56 @@ func reverseLinkedList(_ list: inout LinkedList<Int>) {
 /// merged list:
 ///
 /// -1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11
-func mergeTwoLists(list1: LinkedList<Int>, list2: LinkedList<Int>) -> LinkedList<Int> {
-    var list = LinkedList<Int>()
-    var list1 = list1
-    var list2 = list2
-    var node1 = list1.head
-    var node2 = list2.head
-    if node1 == nil || node2 == nil { return node1 == nil ? list2 : list1 }
+func mergeTwoLists(left: LinkedList<Int>, right: LinkedList<Int>) -> LinkedList<Int> {
+    guard !left.isEmpty else { return right }
+    guard !right.isEmpty else { return left }
 
-    while node1 != nil || node2 != nil {
-
-        if let firstNode = node1, let secondNode = node2 {
-            if firstNode.value > secondNode.value, let node = list2.pop() {
-                list.append(node)
-                node2 = list2.head
-            } else {
-                if let node = list1.pop() {
-                    list.append(node)
-                    node1 = list1.head
-                }
-            }
+    var newHead: Node<Int>?
+    // Create a pointer to the tail of the new list you're adding to. This allows for constant-time append operations.
+    var tail: Node<Int>?
+    var currentLeft = left.head
+    var currentRight = right.head
+    // You compare the first node of left and right to assign newHead.
+    if let leftNode = currentLeft, let rightNode = currentRight {
+        if leftNode.value < rightNode.value {
+            newHead = leftNode
+            currentLeft = leftNode.next
         } else {
-            list.tail?.next = node1 == nil ? node2 : node1
-            node1 = nil
-            node2 = nil
+            newHead = rightNode
+            currentRight = rightNode.next
         }
+        tail = newHead  //Since there is only one node in list at this point, head and tail will be the same.
     }
+    // Start merge
+    // The while loop will keep continue until one of the list reaches the end.
+    while let leftNode = currentLeft, let rightNode = currentRight {
+        // Much like before, you compare the nodes to find out which node to connect to tail.
+        if leftNode.value < rightNode.value {
+            tail?.next = leftNode
+            currentLeft = leftNode.next
+        } else {
+            tail?.next = rightNode
+            currentRight = rightNode.next
+        }
+        tail = tail?.next   //Remember reset the tail after add node at the end of list.
+    }
+
+    if let leftNodes = currentLeft {
+        tail?.next = leftNodes
+    }
+
+    if let rightNode = currentRight {
+        tail?.next = rightNode
+    }
+    // Find the real tail after merge process has done. assign head and tail into new list.
+    var list = LinkedList<Int>()
+    list.head = newHead
+    list.tail = {
+        while let next = tail?.next {
+            tail = next
+        }
+        return tail
+    }()
     return list
 }
 
@@ -116,15 +140,17 @@ class LinkedListTests: XCTestCase {
 
     func test_MergeTwoLists() {
         let test1 = ([1,4,10,11], [-1,2,3,6])
-        expect_MergeTwoLists(numbers: test1 )
+        expect_MergeTwoLists(numbers: test1)
         let test2 = ([Int](), [Int]())
-        expect_MergeTwoLists(numbers: test2 )
+        expect_MergeTwoLists(numbers: test2)
         let test3 = ([1,4,10,11], [Int]())
-        expect_MergeTwoLists(numbers: test3 )
+        expect_MergeTwoLists(numbers: test3)
         let test4 = ([Int](), [1,4,10,11])
-        expect_MergeTwoLists(numbers: test4 )
+        expect_MergeTwoLists(numbers: test4)
         let test5 = ([1], [1])
-        expect_MergeTwoLists(numbers: test5 )
+        expect_MergeTwoLists(numbers: test5)
+        let test6 = ([1,2,3], [-3,-2,-1])
+        expect_MergeTwoLists(numbers: test6)
     }
 
     func test_ReverseLinkedList() {
@@ -194,7 +220,7 @@ class LinkedListTests: XCTestCase {
         let list2 = makeLinkList(from: numbers.list2)
         let expectNumbers = (numbers.list1 + numbers.list2).sorted()
         let expectList = makeLinkList(from: expectNumbers)
-        let mergedList = mergeTwoLists(list1: list1, list2: list2)
+        let mergedList = mergeTwoLists(left: list1, right: list2)
         check(mergedList, isEqualTo: expectList)
     }
 
