@@ -125,7 +125,52 @@ func mergeTwoLists(left: LinkedList<Int>, right: LinkedList<Int>) -> LinkedList<
     return list
 }
 
+/// Challenge 5: Remove all occurrences
+///
+/// Create a function that removes all occurrences of a specific element from a linked list. The implementation is similar to the remove(at:) method you implemented for the linked list.
+///
+///     original list.
+///         1 -> 3 -> 3 -> 3 -> 4
+///     list after removing all occurrences of 3.
+///         1 -> 4
+func removeAllOccurrences(in list: inout LinkedList<Int>) {
+    let numbers = list.numbers
+    var dict: [Int: [Int]] = [:]
+    for i in numbers {
+        if var container = dict[i] {
+            container.append(i)
+            dict[i] = container
+        } else {
+            dict[i] = [i]
+        }
+    }
+    var duplicateNumbers: [Int] = []
+    for key in dict.keys {
+        if let container = dict[key], container.count > 1 {
+            duplicateNumbers.append(Int(key))
+        }
+    }
+    for i in duplicateNumbers {
+        list.removeAll(value: i)
+    }
+}
+
 class LinkedListTests: XCTestCase {
+
+    func test_RemoveAllOccurrences() {
+        expect_RemoveAllOccurrences(in: [], expect: [])
+        expect_RemoveAllOccurrences(in: [1,4], expect: [1,4])
+        expect_RemoveAllOccurrences(in: [3,3,3,3], expect: [])
+        expect_RemoveAllOccurrences(in: [1,3,3,3,3,4], expect: [1,4])
+    }
+
+    func test_removeAllSpecificValue() {
+        expect_removeAll(value: 3, from: [], expect: [])
+        expect_removeAll(value: 4, from: [1,2,3,4,4], expect: [1,2,3])
+        expect_removeAll(value: 4, from: [4,4], expect: [])
+        expect_removeAll(value: 5, from: [1,2,3,4], expect: [1,2,3,4])
+        expect_removeAll(value: 4, from: [4], expect: [])
+    }
 
     func test_MergeTwoLists() {
         let test1 = ([1,4,10,11], [-1,2,3,6])
@@ -204,6 +249,20 @@ class LinkedListTests: XCTestCase {
     }
 
     //MARK: - Expect
+    func expect_RemoveAllOccurrences(in numbers: [Int], expect: [Int], file: StaticString = #file, line: UInt = #line) {
+        var testList = numbers.linkedList
+        removeAllOccurrences(in: &testList)
+        let result = testList.numbers
+        XCTAssertEqual(result, expect)
+    }
+
+    func expect_removeAll(value: Int, from numbers: [Int], expect: [Int]) {
+        var list = numbers.linkedList
+        list.removeAll(value: value)
+        let result = list.numbers
+        XCTAssertEqual(result, expect)
+    }
+
     func expect_MergeTwoLists(numbers: (list1: [Int], list2: [Int])) {
         let list1 = numbers.list1.linkedList
         let list2 = numbers.list2.linkedList
@@ -291,6 +350,31 @@ fileprivate extension LinkedList where Element == Int {
         }
         return nodes
     }
+
+    /// Remove specific value in linkedList.
+    ///
+    ///     1 -> 2 -> 3 -> 4    input value 3
+    ///     return 1 -> 2 -> 4
+    /// - Parameter value: The value you want to remove in linkedList.
+    mutating func removeAll(value: Int) {
+        while let head = self.head, head.value == value {
+            self.head = head.next
+        }
+
+        var prev = self.head
+        var current = self.head?.next
+        while let currentNode = current {
+            guard currentNode.value != value else {
+                prev?.next = current?.next
+                current = prev?.next
+                continue
+            }
+            prev = current
+            current = current?.next
+        }
+        self.tail = prev
+    }
+
 }
 
 fileprivate extension Array where Element == Int {
