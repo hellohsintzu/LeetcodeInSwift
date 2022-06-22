@@ -11,8 +11,7 @@ import LeetcodeInSwift
 
 /// Challenge 1: Print in reverse.
 ///
-///     1 -> 2 -> 3 -> nil
-///     should return [3, 2, 1]
+///     1 -> 2 -> 3 -> nil  return [3, 2, 1]
 ///
 /// - Parameters:
 ///   - node: Should put linkedList head node.
@@ -25,8 +24,8 @@ func printInReverseLinkedList(_ node: Node<Int>?, into array: inout [Int]) {
 
 /// Challenge 2: Find the middle node.
 ///
-///     1 -> 2 -> 3 -> 4 -> nil should return node with value 3
-///     1 -> 2 -> 3 -> nil should return node with value 2
+///     1 -> 2 -> 3 -> 4 -> nil  return Node with value 3
+///     1 -> 2 -> 3 -> nil       return Node with value 2
 ///
 func fundTheMiddleNode(from list: LinkedList<Int>) -> Node<Int>? {
     var faster = list.head
@@ -68,13 +67,11 @@ func reverseLinkedList(_ list: inout LinkedList<Int>) {
 ///You may assume the sort order is ascending.
 ///
 ///     list1:
-///     1 -> 4 -> 10 -> 11
+///         1 -> 4 -> 10 -> 11
 ///     list2:
-///     -1 -> 2 -> 3 -> 6
-///
-/// merged list:
-///
-/// -1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11
+///         -1 -> 2 -> 3 -> 6
+///     merged list:
+///         -1 -> 1 -> 2 -> 3 -> 4 -> 6 -> 10 -> 11
 func mergeTwoLists(left: LinkedList<Int>, right: LinkedList<Int>) -> LinkedList<Int> {
     guard !left.isEmpty else { return right }
     guard !right.isEmpty else { return left }
@@ -159,22 +156,22 @@ class LinkedListTests: XCTestCase {
     }
 
     func test_FundTheMiddleNode() {
-        let test1 = makeLinkList(from: [1,2,3,4])
+        let test1 = [1,2,3,4].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test1)?.value, 3)
 
-        let test2 = makeLinkList(from: [1,2,3])
+        let test2 = [1,2,3].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test2)?.value, 2)
 
-        let test3 = makeLinkList(from: [])
+        let test3 = [].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test3)?.value, nil)
 
-        let test4 = makeLinkList(from: [1,2])
+        let test4 = [1,2].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test4)?.value, 2)
 
-        let test5 = makeLinkList(from: [1,2,3,4,5,6])
+        let test5 = [1,2,3,4,5,6].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test5)?.value, 4)
 
-        let test6 = makeLinkList(from: [1,2,3,4,5,6,7,8,9])
+        let test6 = [1,2,3,4,5,6,7,8,9].linkedList
         XCTAssertEqual(fundTheMiddleNode(from: test6)?.value, 5)
     }
 
@@ -199,24 +196,28 @@ class LinkedListTests: XCTestCase {
         expect_PrintInReverseLinkedList(input: test6, willGet: test6)
     }
 
-    func test_NodesListIsEqualToNodeArray() {
-        let list = makeLinkList(from: [1,2,3,4].shuffled())
-        checkValue(ofList: list, isEqualToArray: nodesArray(of: list))
-        let empty = makeLinkList(from: [])
-        checkValue(ofList: empty, isEqualToArray: nodesArray(of: empty))
+    func test_numbersToLinkedList() {
+        let list = [1,2,3,4].shuffled().linkedList
+        checkValue(ofList: list, isEqualToArray: list.nodes)
+        let empty = [].linkedList
+        checkValue(ofList: empty, isEqualToArray: empty.nodes)
     }
 
-    //MARK: - Helper
-    func expect_MergeTwoLists(numbers: (list1: [Int], list2: [Int]), file: StaticString = #file, line: UInt = #line) {
-        let list1 = makeLinkList(from: numbers.list1)
-        let list2 = makeLinkList(from: numbers.list2)
+    //MARK: - Expect
+    func expect_MergeTwoLists(numbers: (list1: [Int], list2: [Int])) {
+        let list1 = numbers.list1.linkedList
+        let list2 = numbers.list2.linkedList
         let expectNumbers = (numbers.list1 + numbers.list2).sorted()
-        let expectList = makeLinkList(from: expectNumbers)
+        let expectList = expectNumbers.linkedList
         let mergedList = mergeTwoLists(left: list1, right: list2)
         check(mergedList, isEqualTo: expectList)
     }
 
-    func check(_ list: LinkedList<Int>, isEqualTo expectList: LinkedList<Int>, file: StaticString = #file, line: UInt = #line) {
+    /// Check two lists is equal or not.
+    ///
+    ///     (1 -> 2 -> 3 -> 4) is equal to (1 -> 2 -> 3 -> 4)
+    ///     (1 -> 2 -> 3 -> 4) is not equal to (1 -> 2 -> 4 -> 4)
+    private func check(_ list: LinkedList<Int>, isEqualTo expectList: LinkedList<Int>) {
         var node1 = list.head
         var node2 = expectList.head
         while node1 != nil || node2 != nil {
@@ -226,15 +227,15 @@ class LinkedListTests: XCTestCase {
         }
     }
 
-    func expect_ReverseLinkedList(input numbers: [Int], shouldOutput reversedNumbers: [Int], file: StaticString = #file, line: UInt = #line) {
+    func expect_ReverseLinkedList(input numbers: [Int], shouldOutput reversedNumbers: [Int]) {
         guard numbers.count == reversedNumbers.count else {
             return XCTFail("number is not match")
         }
-        var list = makeLinkList(from: numbers)
+        var list = numbers.linkedList
         reverseLinkedList(&list)
-        let reversedNodes = nodesArray(of: list)
-        let expectList = makeLinkList(from: reversedNumbers)
-        let expectNodes = nodesArray(of: expectList)
+        let reversedNodes = list.nodes
+        let expectList = reversedNumbers.linkedList
+        let expectNodes = expectList.nodes
 
         for i in 0..<reversedNodes.count {
             let node1 = reversedNodes[i]
@@ -243,7 +244,13 @@ class LinkedListTests: XCTestCase {
         }
     }
 
-    func checkValue(ofList list: LinkedList<Int>, isEqualToArray nodeArray: [Node<Int>?], file: StaticString = #file, line: UInt = #line) {
+    /// Check the nodes of linkedList is equal to nodes of target array.
+    ///
+    ///     1 -> 2 -> 3 -> 4
+    ///     is equal to
+    ///     [1, 2, 3, 4]
+    ///
+    private func checkValue(ofList list: LinkedList<Int>, isEqualToArray nodeArray: [Node<Int>?]) {
         var index = 0
 
         var currentNode = list.head
@@ -254,33 +261,46 @@ class LinkedListTests: XCTestCase {
         }
     }
 
-    func nodesArray(of list: LinkedList<Int>) -> [Node<Int>] {
+    func expect_PrintInReverseLinkedList(input numbers: [Int]?, willGet: [Int]) {
+        let linkedList = numbers?.linkedList ?? LinkedList<Int>()
+        var ans: [Int] = []
+        printInReverseLinkedList(linkedList.head, into: &ans)
+        XCTAssertEqual(ans, willGet)
+    }
+}
+
+//MARK: - HELPER
+fileprivate extension LinkedList where Element == Int {
+
+    var numbers: [Int] {
+        var currentNode = self.head
+        var numbers: [Int] = []
+        while let node = currentNode {
+            numbers.append(node.value)
+            currentNode = currentNode?.next
+        }
+        return numbers
+    }
+
+    var nodes: [Node<Int>] {
         var nodes: [Node<Int>] = []
-        var currentNode =  list.head
+        var currentNode =  self.head
         while let node = currentNode {
             nodes.append(node)
             currentNode = node.next
         }
         return nodes
     }
+}
 
-    func expect_PrintInReverseLinkedList(input numbers: [Int]?, willGet: [Int], file: StaticString = #file, line: UInt = #line) {
-        let linkList = makeLinkList(from: numbers)
-        var ans: [Int] = []
-        printInReverseLinkedList(linkList.head, into: &ans)
-        XCTAssertEqual(ans, willGet)
-    }
+fileprivate extension Array where Element == Int {
 
-    func makeLinkList(from numbers: [Int]?) -> LinkedList<Int> {
-        var linkList = LinkedList<Int>()
-        guard let numbers = numbers else {
-            return linkList
+    var linkedList: LinkedList<Int> {
+        var linkedList = LinkedList<Int>()
+
+        for number in self {
+            linkedList.append(number)
         }
-        
-        for number in numbers {
-            linkList.append(number)
-        }
-        return linkList
+        return linkedList
     }
-
 }
