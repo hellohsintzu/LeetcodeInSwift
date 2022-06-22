@@ -13,6 +13,7 @@
 		5434B8DF285789F70067AF6E /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8DE285789F70067AF6E /* StackTests.swift */; };
 		5434B8E128578A510067AF6E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E028578A510067AF6E /* LinkedList.swift */; };
 		5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E228578A6E0067AF6E /* LinkedListTests.swift */; };
+		54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		5434B8DE285789F70067AF6E /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		5434B8E028578A510067AF6E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		5434B8E228578A6E0067AF6E /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,17 @@
 			children = (
 				5434B8DE285789F70067AF6E /* StackTests.swift */,
 				5434B8E228578A6E0067AF6E /* LinkedListTests.swift */,
+				54FC1D662863082D0075315E /* Array */,
 			);
 			path = LeetcodeInSwiftTests;
+			sourceTree = "<group>";
+		};
+		54FC1D662863082D0075315E /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */,
+			);
+			path = Array;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 			files = (
 				5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */,
 				5434B8DF285789F70067AF6E /* StackTests.swift in Sources */,
+				54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
