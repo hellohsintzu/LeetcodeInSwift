@@ -16,6 +16,7 @@
 		54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */; };
 		54E2F46B2868359400373B4A /* SquaresOfASortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */; };
 		54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46C28683B1400373B4A /* DuplicateZeros.swift */; };
+		54E2F46F28685C9700373B4A /* MergeSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46E28685C9700373B4A /* MergeSortedArray.swift */; };
 		54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumbersWithEvenNumberOfDigits.swift; sourceTree = "<group>"; };
 		54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresOfASortedArray.swift; sourceTree = "<group>"; };
 		54E2F46C28683B1400373B4A /* DuplicateZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateZeros.swift; sourceTree = "<group>"; };
+		54E2F46E28685C9700373B4A /* MergeSortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeSortedArray.swift; sourceTree = "<group>"; };
 		54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */,
 				54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */,
 				54E2F46C28683B1400373B4A /* DuplicateZeros.swift */,
+				54E2F46E28685C9700373B4A /* MergeSortedArray.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */,
 				54E2F46B2868359400373B4A /* SquaresOfASortedArray.swift in Sources */,
+				54E2F46F28685C9700373B4A /* MergeSortedArray.swift in Sources */,
 				5434B8DF285789F70067AF6E /* StackTests.swift in Sources */,
 				54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */,
 				54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */,
