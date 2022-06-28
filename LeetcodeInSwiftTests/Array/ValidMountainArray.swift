@@ -21,25 +21,30 @@ class ValidMountainArray: XCTestCase {
     ///  - 1 <= arr.length <= 104
     ///  - 0 <= arr[i] <= 104
     func validMountainArray(_ arr: [Int]) -> Bool {
-        guard arr.count >= 3 else { return false }
-        var rightPoint = 2
-        var middlePoint = 1
-        var leftPoint = 0
-        var summitCount = 0
+        /**
+         Two people climb from left and from right separately.
+         If they are climbing the same mountain,
+         they will meet at the same point.
+        */
+        var firstPeak = 0
+        var secondPeak = arr.count - 1
 
-        while rightPoint <= (arr.count - 1) {
-            let isHole = arr[leftPoint] > arr[middlePoint] && arr[middlePoint] < arr[rightPoint]
-            let isFlat = arr[leftPoint] == arr[middlePoint] || arr[middlePoint] == arr[rightPoint]
-            guard !isFlat && !isHole else { return false }
-
-            let isSummit = arr[leftPoint] < arr[middlePoint] && arr[middlePoint] > arr[rightPoint]
-            summitCount += isSummit ? 1 : 0
-
-            rightPoint += 1
-            middlePoint += 1
-            leftPoint += 1
+        for i in 1..<arr.count {
+            if arr[firstPeak] < arr[i] {
+                firstPeak = i
+            } else {
+                break
+            }
         }
-        return summitCount == 1
+
+        for i in (0..<arr.count - 1).reversed() {
+            if arr[secondPeak] < arr[i] {
+                secondPeak = i
+            } else {
+                break
+            }
+        }
+        return firstPeak == secondPeak && firstPeak != 0 && secondPeak != (arr.count - 1)
     }
 
     func test_ValidMountainArray() {
