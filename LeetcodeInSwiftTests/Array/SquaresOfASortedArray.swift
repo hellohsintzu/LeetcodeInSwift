@@ -26,6 +26,8 @@ class SquaresOfASortedArray: XCTestCase {
     ///  - 1 <= nums.length <= 104
     ///  - -104 <= nums[i] <= 104
     ///  - nums is sorted in non-decreasing order.
+    ///
+    ///  Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
     func sortedSquares(_ nums: [Int]) -> [Int] {
         var result = Array.init(repeating: 0, count: nums.count)
         for i in 0..<nums.count {
