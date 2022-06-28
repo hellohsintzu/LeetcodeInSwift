@@ -23,6 +23,7 @@
 		54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F4762869961300373B4A /* ValidMountainArray.swift */; };
 		54E2F479286AABE300373B4A /* ReplaceElementsWithGreatestElementOnRightSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F478286AABE300373B4A /* ReplaceElementsWithGreatestElementOnRightSide.swift */; };
 		54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F47A286AB73100373B4A /* MoveZeroes.swift */; };
+		54E2F47D286AB9EF00373B4A /* SortArrayByParity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F47C286AB9EF00373B4A /* SortArrayByParity.swift */; };
 		54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		54E2F4762869961300373B4A /* ValidMountainArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidMountainArray.swift; sourceTree = "<group>"; };
 		54E2F478286AABE300373B4A /* ReplaceElementsWithGreatestElementOnRightSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceElementsWithGreatestElementOnRightSide.swift; sourceTree = "<group>"; };
 		54E2F47A286AB73100373B4A /* MoveZeroes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveZeroes.swift; sourceTree = "<group>"; };
+		54E2F47C286AB9EF00373B4A /* SortArrayByParity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortArrayByParity.swift; sourceTree = "<group>"; };
 		54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				54E2F4742868B84600373B4A /* CheckIsDoubleExist.swift */,
 				54E2F4762869961300373B4A /* ValidMountainArray.swift */,
 				54E2F478286AABE300373B4A /* ReplaceElementsWithGreatestElementOnRightSide.swift */,
+				54E2F47C286AB9EF00373B4A /* SortArrayByParity.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */,
 				54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */,
 				54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */,
+				54E2F47D286AB9EF00373B4A /* SortArrayByParity.swift in Sources */,
 				54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */,
 				54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */,
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
