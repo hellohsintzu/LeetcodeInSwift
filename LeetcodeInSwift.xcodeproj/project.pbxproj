@@ -13,6 +13,7 @@
 		5434B8DF285789F70067AF6E /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8DE285789F70067AF6E /* StackTests.swift */; };
 		5434B8E128578A510067AF6E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E028578A510067AF6E /* LinkedList.swift */; };
 		5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E228578A6E0067AF6E /* LinkedListTests.swift */; };
+		548FD9E0286AFF5E00E0AD82 /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9DF286AFF5E00E0AD82 /* TwoSum.swift */; };
 		54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */; };
 		54E2F46B2868359400373B4A /* SquaresOfASortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */; };
 		54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46C28683B1400373B4A /* DuplicateZeros.swift */; };
@@ -48,6 +49,7 @@
 		5434B8DE285789F70067AF6E /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		5434B8E028578A510067AF6E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		5434B8E228578A6E0067AF6E /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		548FD9DF286AFF5E00E0AD82 /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
 		54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumbersWithEvenNumberOfDigits.swift; sourceTree = "<group>"; };
 		54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresOfASortedArray.swift; sourceTree = "<group>"; };
 		54E2F46C28683B1400373B4A /* DuplicateZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateZeros.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		548FD9DD286AFF4000E0AD82 /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+				548FD9DF286AFF5E00E0AD82 /* TwoSum.swift */,
+			);
+			path = Easy;
+			sourceTree = "<group>";
+		};
 		54E2F480286ABC6600373B4A /* Conclusion */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				548FD9D7286AF72F00E0AD82 /* Arrays 101 */,
+				548FD9DD286AFF4000E0AD82 /* Easy */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -333,6 +344,7 @@
 				54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */,
 				54E2F47D286AB9EF00373B4A /* SortArrayByParity.swift in Sources */,
 				54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */,
+				548FD9E0286AFF5E00E0AD82 /* TwoSum.swift in Sources */,
 				54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */,
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
 				54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */,
