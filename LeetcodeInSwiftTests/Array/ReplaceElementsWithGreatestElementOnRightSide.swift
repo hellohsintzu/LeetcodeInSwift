@@ -18,14 +18,13 @@ class ReplaceElementsWithGreatestElementOnRightSide: XCTestCase {
     ///  - 1 <= arr[i] <= 105
     func replaceElements(_ arr: [Int]) -> [Int] {
         var result = Array.init(repeating: -1, count: arr.count)
-        for i in 0..<arr.count {
-            var greater = -1
-            for n in (i+1)..<arr.count {
-                if arr[n] > greater {
-                    greater = arr[n]
-                }
+        guard var greatest = arr.last else { return [-1] }
+        //Iterate back to start.
+        for i in (0..<arr.count-1).reversed() {
+            result[i] = greatest     //replace the number with greatest number.
+            if arr[i] > greatest {
+                greatest = arr[i]    //store the greatest number.
             }
-            result[i] = greater
         }
         return result
     }
