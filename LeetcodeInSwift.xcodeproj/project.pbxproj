@@ -20,6 +20,7 @@
 		54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F470286864EF00373B4A /* RemoveElement.swift */; };
 		54E2F4732868A9CC00373B4A /* RemoveDuplicatesFromSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F4722868A9CC00373B4A /* RemoveDuplicatesFromSortedArray.swift */; };
 		54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F4742868B84600373B4A /* CheckIsDoubleExist.swift */; };
+		54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F4762869961300373B4A /* ValidMountainArray.swift */; };
 		54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		54E2F470286864EF00373B4A /* RemoveElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveElement.swift; sourceTree = "<group>"; };
 		54E2F4722868A9CC00373B4A /* RemoveDuplicatesFromSortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDuplicatesFromSortedArray.swift; sourceTree = "<group>"; };
 		54E2F4742868B84600373B4A /* CheckIsDoubleExist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIsDoubleExist.swift; sourceTree = "<group>"; };
+		54E2F4762869961300373B4A /* ValidMountainArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidMountainArray.swift; sourceTree = "<group>"; };
 		54FC1D69286308840075315E /* MaxConsecutiveOnes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaxConsecutiveOnes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 				54E2F470286864EF00373B4A /* RemoveElement.swift */,
 				54E2F4722868A9CC00373B4A /* RemoveDuplicatesFromSortedArray.swift */,
 				54E2F4742868B84600373B4A /* CheckIsDoubleExist.swift */,
+				54E2F4762869961300373B4A /* ValidMountainArray.swift */,
 			);
 			path = Array;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				54E2F4732868A9CC00373B4A /* RemoveDuplicatesFromSortedArray.swift in Sources */,
 				54FC1D6A286308840075315E /* MaxConsecutiveOnes.swift in Sources */,
 				54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */,
+				54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */,
 				54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */,
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
 				54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */,
