@@ -11,16 +11,15 @@ class ThirdMaximumNumber: XCTestCase {
 
     /// Given an integer array `nums`, `return the third distinct maximum` number in this array. If the third maximum does not exist, return the maximum number.
     ///
-    /// Constraints:
-    ///  - 1 <= nums.length <= 104
-    ///  - -231 <= nums[i] <= 231 - 1
-    ///
     ///Follow up: Can you find an O(n) solution?
     func thirdMax(_ nums: [Int]) -> Int {
         let a = Array(Set(nums)).sorted()
         return a.count >= 3 ? a[a.count - 3] : a.last!
     }
 
+    /// Constraints
+    ///  - 1 <= nums.length <= 104
+    ///  - -231 <= nums[i] <= 231 - 1
     func test_ThirdMax() {
         /**
          Explanation:

@@ -16,11 +16,6 @@ class RemoveDuplicatesFromSortedArray: XCTestCase {
     /// Return `k` after placing the final result in the first `k` slots of `nums`.
     ///
     /// Do not allocate extra space for another array. You must do this by `modifying the input array` in-place with O(1) extra memory.
-    ///
-    /// Constraints:
-    ///  - 1 <= nums.length <= 3 * 104
-    ///  - -100 <= nums[i] <= 100
-    ///  - nums is sorted in non-decreasing order.
     func removeDuplicates(_ nums: inout [Int]) -> Int {
         guard !nums.isEmpty else { return 0 }
         guard nums.count > 1 else { return 1 }
@@ -36,6 +31,10 @@ class RemoveDuplicatesFromSortedArray: XCTestCase {
         return nums.count
     }
 
+    /// Constraints
+    ///  - 1 <= nums.length <= 3 * 104
+    ///  - -100 <= nums[i] <= 100
+    ///  - nums is sorted in non-decreasing order.
     func test_RemoveDuplicates() {
 
         // Explanation:

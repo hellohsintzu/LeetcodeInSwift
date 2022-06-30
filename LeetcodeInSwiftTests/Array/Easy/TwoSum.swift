@@ -15,12 +15,6 @@ class TwoSum: XCTestCase {
     ///
     /// You can return the answer in any order.
     ///
-    /// Constraints:
-    ///  - 2 <= nums.length <= 104
-    ///  - -109 <= nums[i] <= 109
-    ///  - -109 <= target <= 109
-    ///  - Only one valid answer exists.
-    ///
     ///  Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var dict: [Int: Int] = [:]
@@ -37,6 +31,11 @@ class TwoSum: XCTestCase {
         return []
     }
 
+    /// Constraints
+    ///  - 2 <= nums.length <= 104
+    ///  - -109 <= nums[i] <= 109
+    ///  - -109 <= target <= 109
+    ///  - Only one valid answer exists.
     func test_TwoSum() {
 
         //Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].

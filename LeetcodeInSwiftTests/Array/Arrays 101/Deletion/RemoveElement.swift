@@ -24,7 +24,10 @@ class RemoveElement: XCTestCase {
         }
         return nums.count
     }
-
+    /// Constraints
+    ///  - 0 <= nums.length <= 100
+    ///  - 0 <= nums[i] <= 50
+    ///  - 0 <= val <= 100
     func test_RemoveElement() {
 
         // Explanation:

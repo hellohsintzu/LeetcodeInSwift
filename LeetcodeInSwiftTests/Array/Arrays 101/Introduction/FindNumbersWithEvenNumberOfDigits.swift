@@ -23,10 +23,6 @@ class FindNumbersWithEvenNumberOfDigits: XCTestCase {
     ///     6 contains 1 digit (odd number of digits).
     ///     7896 contains 4 digits (even number of digits).
     ///     Therefore only 12 and 7896 contain an even number of digits.
-
-    ///  Constraints:
-    ///  - 1 <= nums.length <= 500
-    ///  - 1 <= nums[i] <= 105
     func findNumbers(_ nums: [Int]) -> Int {
         var result = 0
         for num in nums {
@@ -35,6 +31,9 @@ class FindNumbersWithEvenNumberOfDigits: XCTestCase {
         return result
     }
 
+    ///  Constraints
+    ///  - 1 <= nums.length <= 500
+    ///  - 1 <= nums[i] <= 105
     func test_findNumbers() {
         check(input: [12,345,2,6,7896], expect: 2)
         check(input: [555,901,482,1771], expect: 1)

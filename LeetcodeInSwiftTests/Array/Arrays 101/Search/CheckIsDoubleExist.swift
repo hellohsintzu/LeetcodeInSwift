@@ -15,10 +15,6 @@ class CheckIsDoubleExist: XCTestCase {
     /// - i != j
     /// - 0 <= i, j < arr.length
     /// - arr[i] == 2 * arr[j]
-    ///
-    /// Constraints:
-    ///  - 2 <= arr.length <= 500
-    ///  - -10^3 <= arr[i] <= 10^3
     func checkIfExist(_ arr: [Int]) -> Bool {
         var temp: [Int] = []
 
@@ -30,6 +26,9 @@ class CheckIsDoubleExist: XCTestCase {
         return false
     }
 
+    /// Constraints
+    ///  - 2 <= arr.length <= 500
+    ///  - -10^3 <= arr[i] <= 10^3
     func test_checkIfExist() {
 
         // Explanation: N = 10 is the double of M = 5,that is, 10 = 2 * 5.

@@ -14,10 +14,6 @@ class HeightChecker: XCTestCase {
     /// You are given an integer array `heights` representing the current order that the students are standing in. Each `heights[i]` is the height of the `ith` student in line (0-indexed).
     ///
     /// Return the number of indices where `heights[i] != expected[i]`.
-    ///
-    /// Constraints:
-    ///  - 1 <= heights.length <= 100
-    ///  - 1 <= heights[i] <= 100
     func heightChecker(_ heights: [Int]) -> Int {
         let sortedHeights = heights.sorted()
         var diffCounter = 0
@@ -29,6 +25,9 @@ class HeightChecker: XCTestCase {
         return diffCounter
     }
 
+    /// Constraints
+    ///  - 1 <= heights.length <= 100
+    ///  - 1 <= heights[i] <= 100
     func test_HeightChecker() {
         /**
          Explanation:

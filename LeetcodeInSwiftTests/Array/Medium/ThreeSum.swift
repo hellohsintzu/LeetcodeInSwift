@@ -13,10 +13,6 @@ class ThreeSum: XCTestCase {
     /// Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
     ///
     /// Notice that the solution set must not contain duplicate triplets.
-    ///
-    /// Constraints:
-    ///  - 0 <= nums.length <= 3000
-    ///  - -105 <= nums[i] <= 105
     func threeSum(_ nums: [Int]) -> [[Int]] {
 
         var result: [[Int]] = []
@@ -48,6 +44,9 @@ class ThreeSum: XCTestCase {
         return result
     }
 
+    /// Constraints
+    ///  - 0 <= nums.length <= 3000
+    ///  - -105 <= nums[i] <= 105
     func test_ThreeSum() {
         check(input: [-1,0,1,2,-1,-4], expect: [[-1,-1,2],[-1,0,1]])
         check(input: [], expect: [])

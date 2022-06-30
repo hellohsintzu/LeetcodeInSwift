@@ -18,10 +18,6 @@ class DuplicateZeros: XCTestCase {
     ///     Output: [1,0,0,2,3,0,0,4]
     ///
     /// Explanation: After calling your function, the input array is modified to: [1,0,0,2,3,0,0,4]
-    ///
-    /// Constraints:
-    ///  - 1 <= arr.length <= 104
-    ///  - 0 <= arr[i] <= 9
     func duplicateZeros(_ arr: inout [Int]) {
         var temp = Array.init(repeating: 0, count: arr.count)
         var arrIndex = 0
@@ -38,6 +34,9 @@ class DuplicateZeros: XCTestCase {
         arr = temp
     }
 
+    /// Constraints
+    ///  - 1 <= arr.length <= 104
+    ///  - 0 <= arr[i] <= 9
     func test_DuplicateZeros() {
         check(input: [1,0,2,3,0,4,5,0], expect: [1,0,0,2,3,0,0,4])
         check(input: [1,2,3], expect: [1,2,3])

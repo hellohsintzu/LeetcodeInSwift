@@ -16,10 +16,6 @@ class ValidMountainArray: XCTestCase {
     ///  - There exists some `i` with `0 < i < arr.length - 1` such that:
     ///  - `arr[0] < arr[1] < ... < arr[i - 1] < arr[i]`
     ///  - `arr[i] > arr[i + 1] > ... > arr[arr.length - 1]`
-    ///
-    /// Constraints:
-    ///  - 1 <= arr.length <= 104
-    ///  - 0 <= arr[i] <= 104
     func validMountainArray(_ arr: [Int]) -> Bool {
         /**
          Two people climb from left and from right separately.
@@ -47,6 +43,9 @@ class ValidMountainArray: XCTestCase {
         return firstPeak == secondPeak && firstPeak != 0 && secondPeak != (arr.count - 1)
     }
 
+    /// Constraints
+    ///  - 1 <= arr.length <= 104
+    ///  - 0 <= arr[i] <= 104
     func test_ValidMountainArray() {
         check(input: [2,1], expect: false)
         check(input: [3,5,5], expect: false)
