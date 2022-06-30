@@ -13,39 +13,22 @@ class SearchInsertPosition: XCTestCase {
     ///
     /// You must write an algorithm with O(log n) runtime complexity.
     func searchInsert(_ nums: [Int], _ target: Int) -> Int {
-        guard nums.count > 1 else { return (target > nums[0] ? 1 : 0) }
-        var startIndex = 0
-        var endIndex = nums.count - 1
-        var middleIndex: Int {
-            return (startIndex + endIndex)/2
-        }
+        var leftPointer = 0
+        var rightPointer = nums.count - 1
 
-        //binary search for target number.
-        while startIndex + 1 != endIndex {
-            if nums[middleIndex] == target { return middleIndex }
-            if target > nums[middleIndex] {
-                startIndex = middleIndex
-            } else if target < nums[middleIndex] {
-                endIndex = middleIndex
+        //Binary search
+        while leftPointer <= rightPointer {   //if left pointer reach to right pointer, finish the search.
+            let middle = (leftPointer + rightPointer) / 2   //find the middle index.
+
+            if nums[middle] < target {
+                leftPointer = middle + 1    //if target number is on right side of middle, makes (middle + 1) left pointer.
+            } else if nums[middle] > target {
+                rightPointer = middle - 1   //if target number is on left side of middle, makes (middle - 1) right pointer.
+            } else {
+                 return middle  //found the target, return.
             }
         }
-        //if can't find target, find where to insert.
-        if startIndex == 0 && endIndex == nums.count - 1 { //if elements == 2.
-            if target <= nums[0] {
-                return 0
-            } else if nums[0] < target && target <= nums[endIndex] {
-                return 1
-            } else if target > nums[endIndex] {
-                return 2
-            }
-
-        } else if startIndex == 0 { //if two points is at leftmost.
-            return (target > nums[0]) ? 1 : 0
-        } else if endIndex == nums.count - 1 {  //if two points is at rightmost.
-            return (target > nums[nums.count - 1]) ? endIndex + 1 : endIndex
-        }
-
-        return startIndex + 1
+        return leftPointer  //if didn't find the target, return left pointer.
     }
 
     /// Constraints
