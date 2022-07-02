@@ -20,6 +20,7 @@
 		548FD9EA286EE48700E0AD82 /* ThreeSumClosest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9E9286EE48700E0AD82 /* ThreeSumClosest.swift */; };
 		548FD9ED28700FEC00E0AD82 /* FourSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9EC28700FEC00E0AD82 /* FourSum.swift */; };
 		548FD9EF28701C5A00E0AD82 /* ContainsDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9EE28701C5A00E0AD82 /* ContainsDuplicate.swift */; };
+		548FD9F228701E4400E0AD82 /* PlusOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9F128701E4400E0AD82 /* PlusOne.swift */; };
 		54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */; };
 		54E2F46B2868359400373B4A /* SquaresOfASortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */; };
 		54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46C28683B1400373B4A /* DuplicateZeros.swift */; };
@@ -62,6 +63,7 @@
 		548FD9E9286EE48700E0AD82 /* ThreeSumClosest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSumClosest.swift; sourceTree = "<group>"; };
 		548FD9EC28700FEC00E0AD82 /* FourSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSum.swift; sourceTree = "<group>"; };
 		548FD9EE28701C5A00E0AD82 /* ContainsDuplicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainsDuplicate.swift; sourceTree = "<group>"; };
+		548FD9F128701E4400E0AD82 /* PlusOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusOne.swift; sourceTree = "<group>"; };
 		54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumbersWithEvenNumberOfDigits.swift; sourceTree = "<group>"; };
 		54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresOfASortedArray.swift; sourceTree = "<group>"; };
 		54E2F46C28683B1400373B4A /* DuplicateZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateZeros.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				548FD9DF286AFF5E00E0AD82 /* TwoSum.swift */,
 				548FD9EE28701C5A00E0AD82 /* ContainsDuplicate.swift */,
 				548FD9E4286C5F7100E0AD82 /* SearchInsertPosition.swift */,
+				548FD9F128701E4400E0AD82 /* PlusOne.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */,
 				548FD9E0286AFF5E00E0AD82 /* TwoSum.swift in Sources */,
 				54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */,
+				548FD9F228701E4400E0AD82 /* PlusOne.swift in Sources */,
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
 				54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */,
 			);
