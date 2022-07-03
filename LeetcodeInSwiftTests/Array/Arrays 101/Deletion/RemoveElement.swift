@@ -47,6 +47,6 @@ class RemoveElement: XCTestCase {
         let value = removeElement(&inputArray, val)
         XCTAssertEqual(value, expect.0)
         let resultArray = Array(inputArray[0..<value])
-        XCTAssertTrue(resultArray.allSatisfy(expect.1.contains))
+        XCTAssertTrue(resultArray.allSatisfy(expect.1.contains), "result: \(resultArray), \n expect: \(expect.1)")
     }
 }
