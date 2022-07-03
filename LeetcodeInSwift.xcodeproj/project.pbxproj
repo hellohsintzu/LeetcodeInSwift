@@ -110,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54130AF42871D22E0096ED6F /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				5434B8DE285789F70067AF6E /* StackTests.swift */,
+				5434B8E228578A6E0067AF6E /* LinkedListTests.swift */,
+			);
+			path = DataStructure;
+			sourceTree = "<group>";
+		};
 		5434B8B128577E850067AF6E = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +150,7 @@
 		5434B8C928577E850067AF6E /* LeetcodeInSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				5434B8DE285789F70067AF6E /* StackTests.swift */,
-				5434B8E228578A6E0067AF6E /* LinkedListTests.swift */,
+				54130AF42871D22E0096ED6F /* DataStructure */,
 				54FC1D662863082D0075315E /* Array */,
 			);
 			path = LeetcodeInSwiftTests;
