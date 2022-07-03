@@ -23,6 +23,7 @@
 		548FD9F228701E4400E0AD82 /* PlusOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9F128701E4400E0AD82 /* PlusOne.swift */; };
 		548FD9F42870286500E0AD82 /* PascalsTriangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9F32870286500E0AD82 /* PascalsTriangle.swift */; };
 		548FD9F62870319E00E0AD82 /* PascalsTriangleII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9F52870319E00E0AD82 /* PascalsTriangleII.swift */; };
+		548FD9F8287150E300E0AD82 /* FindSmallestPositiveInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548FD9F7287150E300E0AD82 /* FindSmallestPositiveInteger.swift */; };
 		54B763552863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */; };
 		54E2F46B2868359400373B4A /* SquaresOfASortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */; };
 		54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E2F46C28683B1400373B4A /* DuplicateZeros.swift */; };
@@ -68,6 +69,7 @@
 		548FD9F128701E4400E0AD82 /* PlusOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusOne.swift; sourceTree = "<group>"; };
 		548FD9F32870286500E0AD82 /* PascalsTriangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalsTriangle.swift; sourceTree = "<group>"; };
 		548FD9F52870319E00E0AD82 /* PascalsTriangleII.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalsTriangleII.swift; sourceTree = "<group>"; };
+		548FD9F7287150E300E0AD82 /* FindSmallestPositiveInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSmallestPositiveInteger.swift; sourceTree = "<group>"; };
 		54B763542863376C00230FE4 /* FindNumbersWithEvenNumberOfDigits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNumbersWithEvenNumberOfDigits.swift; sourceTree = "<group>"; };
 		54E2F46A2868359400373B4A /* SquaresOfASortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaresOfASortedArray.swift; sourceTree = "<group>"; };
 		54E2F46C28683B1400373B4A /* DuplicateZeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateZeros.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				548FD9F128701E4400E0AD82 /* PlusOne.swift */,
 				548FD9F32870286500E0AD82 /* PascalsTriangle.swift */,
 				548FD9F52870319E00E0AD82 /* PascalsTriangleII.swift */,
+				548FD9F7287150E300E0AD82 /* FindSmallestPositiveInteger.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */,
 				548FD9E0286AFF5E00E0AD82 /* TwoSum.swift in Sources */,
 				54E2F4752868B84600373B4A /* CheckIsDoubleExist.swift in Sources */,
+				548FD9F8287150E300E0AD82 /* FindSmallestPositiveInteger.swift in Sources */,
 				548FD9F228701E4400E0AD82 /* PlusOne.swift in Sources */,
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
 				54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */,
