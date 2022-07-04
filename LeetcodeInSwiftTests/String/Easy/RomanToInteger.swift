@@ -19,24 +19,20 @@ class RomanToInteger: XCTestCase {
     ///  - `X` can be placed before `L` (50) and `C` (100) to make 40 and 90.
     ///  - `C` can be placed before `D` (500) and `M` (1000) to make 400 and 900.
     func romanToInt(_ s: String) -> Int {
-        var remanString = s
-        let basicRomanTable: [String: Int] = ["I": 1, "X": 10, "C": 100, "M": 1000,
-                                   "V": 5, "L": 50, "D": 500]
+        var prev = 0, out = 0                       //Store previous and current basic roman integer.
+        for i in s {
+            let curr = dict[i] ?? 0                  //get current roman integer.
 
-        //Replace all of the combination to basic roman string.
-        remanString = remanString.replacingOccurrences(of: "IV", with: "IIII")
-        remanString = remanString.replacingOccurrences(of: "IX", with: "VIIII")
-        remanString = remanString.replacingOccurrences(of: "XL", with: "XXXX")
-        remanString = remanString.replacingOccurrences(of: "XC", with: "LXXXX")
-        remanString = remanString.replacingOccurrences(of: "CD", with: "CCCC")
-        remanString = remanString.replacingOccurrences(of: "CM", with: "DCCCC")
+            //if current smaller then previous (ex: XI), add to output(5+1), else (ex: IX), reduce the output(5-1).
+            out += (curr <= prev) ? prev : -prev
 
-        var result = 0
-        for c in remanString {
-            result += basicRomanTable[String(c)]!
+            prev = curr
         }
-        return result
+        out += prev
+        return out
     }
+
+    private let dict: [Character:Int] = ["I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000]
 
     /// Constraints:
     ///  - 1 <= s.length <= 15
