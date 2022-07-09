@@ -24,11 +24,14 @@ class FindNumbersWithEvenNumberOfDigits: XCTestCase {
     ///     7896 contains 4 digits (even number of digits).
     ///     Therefore only 12 and 7896 contain an even number of digits.
     func findNumbers(_ nums: [Int]) -> Int {
-        var result = 0
+        var count = 0
         for num in nums {
-            result += String(num).count % 2 == 0 ? 1 : 0
+            print("HSIN: \(num), \(Int(log10(Double(num))) % 2 )")
+            if Int(log10(Double(num))) % 2 != 0 {
+                count += 1
+            }
         }
-        return result
+        return count
     }
 
     ///  Constraints

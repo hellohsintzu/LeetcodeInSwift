@@ -13,11 +13,11 @@ class SquaresOfASortedArray: XCTestCase {
     ///
     ///  Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
     func sortedSquares(_ nums: [Int]) -> [Int] {
-        var result = Array.init(repeating: 0, count: nums.count)
-        for i in 0..<nums.count {
-            result[i] = nums[i] * nums[i]
+        var temp = nums
+        for i in 0..<temp.count {
+            temp[i] = temp[i] * temp[i]
         }
-        return result.sorted()
+        return temp.sorted()
     }
 
     /// Constraints

@@ -8,7 +8,7 @@
 import XCTest
 
 class MaxConsecutiveOnes: XCTestCase {
-
+    
     /// Given a binary array nums, return the maximum number of consecutive 1's in the array.
     ///
     ///     Input: nums = [1,1,0,1,1,1]
@@ -18,18 +18,19 @@ class MaxConsecutiveOnes: XCTestCase {
     ///
     /// The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
-        var result = 0
-        var current = 0
-        for i in nums {
-            if i == 0 {
-                if current > result { result = current }
-                current = 0
+        var counter = 0
+        var answer = 0
+        for num in nums {
+            if num == 1 {
+                counter += 1
             } else {
-                current += 1
+                counter = 0
+            }
+            if counter > answer {
+                answer = counter
             }
         }
-        if current > result { result = current }
-        return result
+        return answer
     }
     
     /// Constraints
@@ -39,7 +40,7 @@ class MaxConsecutiveOnes: XCTestCase {
         check(input: [1,1,0,1,1,1], expect: 3)
         check(input: [1,0,1,1,0,1], expect: 2)
     }
-
+    
     func check(input: [Int], expect: Int) {
         let result = findMaxConsecutiveOnes(input)
         XCTAssertEqual(result, expect)
