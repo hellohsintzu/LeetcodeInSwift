@@ -13,6 +13,7 @@
 		5434B8DF285789F70067AF6E /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8DE285789F70067AF6E /* StackTests.swift */; };
 		5434B8E128578A510067AF6E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E028578A510067AF6E /* LinkedList.swift */; };
 		5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E228578A6E0067AF6E /* LinkedListTests.swift */; };
+		54573BCA287C49D700EFA8AB /* ContainsDuplicateII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */; };
 		5477FDF72872C39600A98838 /* RomanToInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FDF62872C39600A98838 /* RomanToInteger.swift */; };
 		5477FDFA2872DF0A00A98838 /* LongestCommonPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FDF92872DF0A00A98838 /* LongestCommonPrefix.swift */; };
 		5477FE712877E98400A98838 /* ValidParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FE702877E98400A98838 /* ValidParentheses.swift */; };
@@ -66,6 +67,7 @@
 		5434B8DE285789F70067AF6E /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		5434B8E028578A510067AF6E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		5434B8E228578A6E0067AF6E /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
+		54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateII.swift; sourceTree = "<group>"; };
 		5477FDF62872C39600A98838 /* RomanToInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanToInteger.swift; sourceTree = "<group>"; };
 		5477FDF92872DF0A00A98838 /* LongestCommonPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestCommonPrefix.swift; sourceTree = "<group>"; };
 		5477FE702877E98400A98838 /* ValidParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidParentheses.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				548FD9F52870319E00E0AD82 /* PascalsTriangleII.swift */,
 				548FD9F7287150E300E0AD82 /* FindSmallestPositiveInteger.swift */,
 				548FD9FD2871628700E0AD82 /* BestTimeToBuyAndSellStock.swift */,
+				54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */,
 			);
 			path = Easy;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				54E2F484286ACC2300373B4A /* FindAllNumbersDisappearedInAnArray.swift in Sources */,
 				54E2F4772869961300373B4A /* ValidMountainArray.swift in Sources */,
 				548FD9F62870319E00E0AD82 /* PascalsTriangleII.swift in Sources */,
+				54573BCA287C49D700EFA8AB /* ContainsDuplicateII.swift in Sources */,
 				54E2F47D286AB9EF00373B4A /* SortArrayByParity.swift in Sources */,
 				54E2F47B286AB73100373B4A /* MoveZeroes.swift in Sources */,
 				548FD9E0286AFF5E00E0AD82 /* TwoSum.swift in Sources */,
