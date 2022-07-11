@@ -11,27 +11,21 @@ class LongestSubstringWithoutRepeatingCharacters: XCTestCase {
 
     /// Given a string s, find the length of the longest substring without repeating characters.
     func lengthOfLongestSubstring(_ s: String) -> Int {
-        let characters = Array(s)
-        var result = 0
+        guard !s.isEmpty else { return 0 }
 
-        for startIndex in 0..<characters.count {
-            var s: Set<Character> = []
-            var endIndex = startIndex
-            var sum = 0
-            while endIndex <= characters.count-1 {
-                s.insert(characters[endIndex])
-                if s.count != (endIndex-startIndex)+1 {
-                    result = max(result, sum)
-                    break
-                } else if endIndex == characters.count-1 {
-                    sum += 1
-                    result = max(result, sum)
-                }
-                sum += 1
-                endIndex += 1
+        var char: [Character] = [], maxLength = 0
+
+        for c in s {
+            //If there is any duplicate character in char, get the index
+            if let duplicateIndex = char.firstIndex(of: c) {
+                //Remove character in char from index 0 to the duplicateIndex
+                char.removeSubrange(0...duplicateIndex)
             }
+            char.append(c)  //Add c at the end of char.
+            //Since there are all unique character in char, compare the length with maximum length
+            maxLength = max(maxLength, char.count)
         }
-        return result
+        return maxLength
     }
 
     /// Constraints:
