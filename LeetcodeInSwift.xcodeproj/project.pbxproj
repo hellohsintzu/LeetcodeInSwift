@@ -13,8 +13,9 @@
 		5434B8DF285789F70067AF6E /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8DE285789F70067AF6E /* StackTests.swift */; };
 		5434B8E128578A510067AF6E /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E028578A510067AF6E /* LinkedList.swift */; };
 		5434B8E328578A6E0067AF6E /* LinkedListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5434B8E228578A6E0067AF6E /* LinkedListTests.swift */; };
-		54573BCA287C49D700EFA8AB /* ContainsDuplicateII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */; };
 		54573BC0287A870900EFA8AB /* MinimumSizeSubarraySum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54573BBF287A870900EFA8AB /* MinimumSizeSubarraySum.swift */; };
+		54573BCA287C49D700EFA8AB /* ContainsDuplicateII.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */; };
+		54573BD528818FA800EFA8AB /* LongestPalindromicSubstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54573BD428818FA800EFA8AB /* LongestPalindromicSubstring.swift */; };
 		5477FDF72872C39600A98838 /* RomanToInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FDF62872C39600A98838 /* RomanToInteger.swift */; };
 		5477FDFA2872DF0A00A98838 /* LongestCommonPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FDF92872DF0A00A98838 /* LongestCommonPrefix.swift */; };
 		5477FE712877E98400A98838 /* ValidParentheses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FE702877E98400A98838 /* ValidParentheses.swift */; };
@@ -68,8 +69,9 @@
 		5434B8DE285789F70067AF6E /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
 		5434B8E028578A510067AF6E /* LinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		5434B8E228578A6E0067AF6E /* LinkedListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedListTests.swift; sourceTree = "<group>"; };
-		54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateII.swift; sourceTree = "<group>"; };
 		54573BBF287A870900EFA8AB /* MinimumSizeSubarraySum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumSizeSubarraySum.swift; sourceTree = "<group>"; };
+		54573BC9287C49D700EFA8AB /* ContainsDuplicateII.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainsDuplicateII.swift; sourceTree = "<group>"; };
+		54573BD428818FA800EFA8AB /* LongestPalindromicSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestPalindromicSubstring.swift; sourceTree = "<group>"; };
 		5477FDF62872C39600A98838 /* RomanToInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RomanToInteger.swift; sourceTree = "<group>"; };
 		5477FDF92872DF0A00A98838 /* LongestCommonPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestCommonPrefix.swift; sourceTree = "<group>"; };
 		5477FE702877E98400A98838 /* ValidParentheses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidParentheses.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				548B4C90287970FF0090F88E /* LongestSubstringWithoutRepeatingCharacters.swift */,
+				54573BD428818FA800EFA8AB /* LongestPalindromicSubstring.swift */,
 			);
 			path = Middum;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				54E2F471286864EF00373B4A /* RemoveElement.swift in Sources */,
 				5477FDF72872C39600A98838 /* RomanToInteger.swift in Sources */,
 				548FD9FC287154EB00E0AD82 /* MedianOfTwoSortedArrays.swift in Sources */,
+				54573BD528818FA800EFA8AB /* LongestPalindromicSubstring.swift in Sources */,
 				548B4C91287970FF0090F88E /* LongestSubstringWithoutRepeatingCharacters.swift in Sources */,
 				54E2F46D28683B1400373B4A /* DuplicateZeros.swift in Sources */,
 			);
