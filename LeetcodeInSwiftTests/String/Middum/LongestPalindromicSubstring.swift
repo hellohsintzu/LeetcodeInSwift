@@ -9,35 +9,26 @@ import XCTest
 
 class LongestPalindromicSubstring: XCTestCase {
 
-    func isPalindrome(for string: String) -> Bool {
-        guard !string.isEmpty else { return false }
-        let characters: [Character] = Array(string)
-        var lhs = 0
-        var rhs = characters.count-1
-
-        while lhs < rhs {
-            if characters[lhs] != characters[rhs] {
-                return false
-            }
-            lhs += 1
-            rhs -= 1
-        }
-        return true
-    }
-
     /// Given a string s, return the longest palindromic substring in s.
     func longestPalindrome(_ s: String) -> String {
-        let characters: [Character] = Array(s)
-        var result = ""
-        for l in 0..<characters.count {
-            for r in l..<characters.count {
-                let s = String(characters[l...r])
-                if isPalindrome(for: s) && s.count > result.count {
-                    result = s
+        let len = s.count
+        let arr = Array(s)
+        if len <= 1 { return s }
+
+        var lhs = 0
+        var rhs = 0
+        var dp = Array(repeating: Array(repeating: false, count: len), count: len)
+
+        for i in 1..<len {
+            for j in 0..<i where arr[j] == arr[i] && (dp[j+1][i-1] || i - j <= 2) {
+                dp[j][i] = true
+                if i - j > rhs - lhs {
+                    lhs = j
+                    rhs = i
                 }
             }
         }
-        return result
+        return String(arr[lhs...rhs])
     }
 
     /// Constraints:
@@ -48,15 +39,6 @@ class LongestPalindromicSubstring: XCTestCase {
         //Explanation: "aba" is also a valid answer.
         check(input: "babad", expect: "bab")
         check(input: "cbbd", expect: "bb")
-    }
-
-    func test_isPalindrome() {
-        XCTAssertEqual(isPalindrome(for: ""), false)
-        XCTAssertEqual(isPalindrome(for: "a"), true)
-        XCTAssertEqual(isPalindrome(for: "aa"), true)
-        XCTAssertEqual(isPalindrome(for: "ab"), false)
-        XCTAssertEqual(isPalindrome(for: "aba"), true)
-        XCTAssertEqual(isPalindrome(for: "abb"), false)
     }
 
     func check(input: String, expect: String) {
